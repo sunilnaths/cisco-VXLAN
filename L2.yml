@@ -1,0 +1,13 @@
+---
+
+vlan:
+- { vlan_id: 24, vni: 10024, name: OPENS-TOOLS-VLAN, des: OPENS-TOOLS-VLAN, vrf_1: OPENS-TOOLS }
+- { vlan_id: 4, vni: 10004, name: L3-VNI-OPENS-TOOLS-VLAN, des: L3-VNI-OPENS-TOOLS-SVI, vrf_1: OPENS-TOOLS }
+
+vrf: OPENS-TOOLS
+
+L2PARAM:
+- { svi: vlan24, address: 10.88.24.1, mask: 24, tag: 24, rd: '24:10024', mcast: 239.0.14.24, vni: 10024 }
+
+L3PARAM:
+- { rd: '4:10004', vni: 10004, vrf: OPENS-TOOLS }
