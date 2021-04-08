@@ -1,0 +1,13 @@
+L2VNI:
+- id: 101
+  ip: 1.1.1.1/24
+  multicast: 239.1.1.1
+  name: vlan101
+  segment: 100101
+  tenant: PROD-3
+- id: 103
+  ip: 2.2.2.2/24
+  multicast: 239.1.1.2
+  name: vlan103
+  segment: 100103
+  tenant: PROD-3

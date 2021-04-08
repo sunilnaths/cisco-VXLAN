@@ -1,0 +1,10 @@
+# Groups
+---
+ leaf:
+   platform: nxos
+
+ spine:
+   platform: nxos
+
+ IOS:
+   platform: ios
