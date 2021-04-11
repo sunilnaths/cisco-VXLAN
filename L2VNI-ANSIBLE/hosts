@@ -1,0 +1,28 @@
+[all:vars]
+ansible_connection=ansible.netcommon.network_cli
+ansible_network_os=nxos
+ansible_user=admin
+ansible_password=cisco
+
+[leaf]
+192.168.127.11
+
+[leaf:vars]
+ansible_connection: ansible.netcommon.network_cli
+ansible_network_os: cisco.nxos.nxos
+ansible_user: admin
+ansible_password: cisco
+ansible_become: yes
+ansible_become_method: enable
+
+
+#[spine]
+#192.168.127.101
+
+[ios1]
+192.168.127.21 ansible_host=192.168.127.21
+
+
+
+[ios2]
+192.168.127.22

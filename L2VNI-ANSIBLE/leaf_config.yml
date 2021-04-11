@@ -1,0 +1,21 @@
+---
+
+- hosts: leaf
+  remote_user: admin
+  gather_facts: no
+  roles:
+    - role : leaf
+  vars_prompt:
+    - name: username
+      prompt: "enter my username"
+      private: no
+    - name: password
+      prompt: "enter my password"
+      private: yes
+
+
+
+- hosts: spine
+  gather_facts: yes
+  roles:
+    - role : spine

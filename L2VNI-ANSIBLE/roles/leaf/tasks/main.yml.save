@@ -1,0 +1,9 @@
+---
+# tasks file for leaf
+
+ - name: CREATE VLAN AND MAP VNI
+   nxos_vlan:
+      vlan_id: "{{ item.vlan }}"
+      mapped_vni: "{{ item.vn-segment }}"
+      name: "{{ item.name }}"
+   with_items: "{{ L2VNI }}"
