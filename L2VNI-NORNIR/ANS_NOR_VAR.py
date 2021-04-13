@@ -87,10 +87,10 @@ def load_vars(task1):
 
 
 def basic_configuration(task1):
-    r = task1.run(task=template_file, template="L2-VxLAN1.j2",
+    r = task1.run(task=template_file, template="L2_VxLAN1.j2",
                   path='')
     task1.host["Var-Nornir.yaml"] = r.result
-    vlan_output = task1.host["Var-Nornir.yaml"]
+    vlan_output = task1.host["Var_Nornir.yaml"]
     vlan_send = vlan_output.splitlines()
     task1.run(task=netmiko_send_config, name="VLAN Commands",
               config_commands=vlan_send)
